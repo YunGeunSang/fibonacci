@@ -8,6 +8,7 @@ public class fibonacci {
         // (1) 메서드 없이 구현
         // (2) 사용자의 입력을 getUserInput() 메서드로 입력받아 구현
         // (3) 피보나치 수열 연산을 getFibonacci() 메서드로 구현
+        // (4) 배열 출력을 printNumbers() 메서드로 구현
 
         int num;
 
@@ -19,12 +20,8 @@ public class fibonacci {
         int[] fibo = new int[num];
         getFibonacci(fibo);
 
-
-        System.out.println("[피보나치 수열 출력]");
-        for (int i =0;i<fibo.length;i++){
-            System.out.println(fibo[i]);
-        }
-        System.out.println("[안내]프로그램을 종료합니다.");
+        // 3
+        printNumbers(fibo);
     }
 
     public static int getUserInput(){
@@ -51,5 +48,13 @@ public class fibonacci {
             fibo[i] = fibo[i-1] + fibo[i-2];
         }
 
+    }
+
+    public static void printNumbers(int[] fibo){
+        System.out.println("[피보나치 수열 출력]");
+        for (int i =0;i<fibo.length;i++){
+            System.out.println(fibo[i]);
+        }
+        System.out.println("[안내]프로그램을 종료합니다.");
     }
 }
